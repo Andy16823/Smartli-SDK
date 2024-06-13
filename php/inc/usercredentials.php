@@ -8,6 +8,6 @@ class userCredentials
     public function __construct(String $appId, String $appSecret)
     {
         $this->appId = $appId;
-        $this->$appSecret = $appSecret;
+        $this->appSecret = $appSecret;
     }
 }

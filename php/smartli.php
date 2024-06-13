@@ -3,6 +3,10 @@ include_once "inc/usercredentials.php";
 
 define("__API__", "https://smartli.me/api-system/v2/index.php?r=");
 
+function createEndpoint($request) {
+    return __API__ . $request;
+}
+
 class Smartli
 {
     public userCredentials $userCredentials;
@@ -41,7 +45,7 @@ class Smartli
             'url' => $url
         );
 
-        return $this->sendRequest(__API__ . "create_url", $data);
+        return $this->sendRequest(createEndpoint('create_url'), $data);
     }
 
 }
