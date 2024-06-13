@@ -48,6 +48,16 @@ class Smartli
         return $this->sendRequest(createEndpoint('create_url'), $data);
     }
 
+    public function getUrls() 
+    {
+        $data = array(
+            'app_id' => $this->userCredentials->appId,
+            'app_secret' => $this->userCredentials->appSecret,
+        );
+
+        return $this->sendRequest(createEndpoint('get_urls'), $data);
+    }
+
 }
 
 ?>
